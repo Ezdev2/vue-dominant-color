@@ -1,7 +1,7 @@
-import DominantColor from './components/DominantColor.vue'
+export { default as DominantColor } from './components/DominantColor.vue'
 
 export default {
-  install: (app) => {
+  install(app) {
     app.component('DominantColor', DominantColor)
   }
 }
