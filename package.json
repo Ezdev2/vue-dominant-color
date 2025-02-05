@@ -1,0 +1,27 @@
+{
+  "name": "vue-dominant-color",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "files": ["dist"],
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@vue/compiler-sfc": "^3.5.13",
+    "rollup": "^4.34.3",
+    "rollup-plugin-vue": "^6.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ezdev2/vue-dominant-color.git"
+  },
+  "keywords": ["vue", "color", "dominant", "image"],
+  "author": "ezdev2",
+  "license": "MIT",
+  "description": "Vue component to extract and apply dominant color from images"
+}
