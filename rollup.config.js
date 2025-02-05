@@ -1,5 +1,7 @@
 import vue from 'rollup-plugin-vue'
 import commonjs from '@rollup/plugin-commonjs'
+import { nodeResolve } from '@rollup/plugin-node-resolve'
+import postcss from 'rollup-plugin-postcss'
 
 export default {
   input: 'src/index.js',
@@ -13,5 +15,15 @@ export default {
       format: 'esm'
     }
   ],
-  plugins: [vue(), commonjs()]
+  plugins: [
+    vue(),
+    nodeResolve(),
+    commonjs(),
+    postcss({
+      extract: true,
+      minimize: true,
+      modules: false
+    })
+  ],
+  external: ['vue']
 }
